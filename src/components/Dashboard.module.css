@@ -1,0 +1,66 @@
+.dashboard {
+  background-color: #ffffff;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard h2 {
+  text-align: center;
+  color: #264653;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+.chartContainer {
+  position: relative;
+  height: 300px;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.noDataText {
+  color: #888;
+  font-style: italic;
+}
+
+.total {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #264653;
+  margin-bottom: 2rem;
+}
+
+.total span {
+  color: #e76f51;
+}
+
+.emissionList h3 {
+  border-bottom: 2px solid #f4a261;
+  padding-bottom: 0.5rem;
+  color: #2a9d8f;
+}
+
+.emissionList ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.emissionList li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 0.5rem;
+  border-bottom: 1px solid #eee;
+  text-transform: capitalize;
+}
+
+.emissionList li:last-child {
+  border-bottom: none;
+}
+
+.emissionList span {
+    color: #555;
+}
