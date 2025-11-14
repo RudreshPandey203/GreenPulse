@@ -1,0 +1,18 @@
+/* src/app/Home.module.css */
+.messageContainer {
+  grid-column: 1 / -1; /* Span all columns */
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.messageContainer h2 {
+    color: #264653;
+}
+
+.messageContainer p {
+    color: #555;
+    font-size: 1.1rem;
+}

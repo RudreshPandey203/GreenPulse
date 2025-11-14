@@ -1,0 +1,134 @@
+/* src/components/BlogSection.module.css */
+.blogSection {
+  background-color: #ffffff;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin-top: 1rem;
+}
+
+.blogSection > h2 { /* Target only the main H2 */
+  text-align: center;
+  color: #264653;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #e9c46a;
+  padding-bottom: 0.5rem;
+}
+
+/* Form Styles */
+.blogForm {
+  background-color: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2.5rem;
+  border: 1px solid #eee;
+}
+
+.blogForm h3 {
+  margin-top: 0;
+  color: #2a9d8f;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.formGroup {
+  margin-bottom: 1rem;
+}
+
+.formGroup label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+.formGroup input[type="text"],
+.formGroup textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit; /* Ensure textarea uses the body font */
+}
+
+.formGroup textarea {
+    resize: vertical; /* Allow vertical resizing */
+}
+
+.submitButton {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #e76f51;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 0.5rem;
+}
+
+.submitButton:hover {
+  background-color: #f4a261;
+}
+
+.submitButton:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.successMessage {
+    text-align: center;
+    color: green;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.errorMessage {
+    text-align: center;
+    color: #e76f51;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+/* Blog Post List Styles */
+.postsHeader {
+    color: #2a9d8f;
+    margin-top: 2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.blogList {
+  margin-top: 1.5rem;
+}
+
+.blogPost {
+  border-bottom: 1px solid #f0f0f0;
+  padding: 1.5rem 0;
+}
+
+.blogPost:last-child {
+  border-bottom: none;
+}
+
+.blogPost h4 {
+  margin: 0 0 0.5rem 0;
+  color: #264653;
+  font-size: 1.3rem;
+}
+
+.blogMeta {
+  font-size: 0.85rem;
+  color: #777;
+  margin-bottom: 0.75rem;
+}
+
+.blogContentSnippet {
+    color: #444;
+    line-height: 1.6;
+    margin: 0;
+}

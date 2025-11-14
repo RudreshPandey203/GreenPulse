@@ -1,29 +1,65 @@
+/* src/components/Dashboard.module.css */
 .dashboard {
   background-color: #ffffff;
   padding: 1.5rem 2rem;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: relative; /* Needed for absolute positioning of toggle button */
 }
+
+/* Style for the toggle button container */
+.viewToggle {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+}
+
+.toggleButton {
+    background-color: #f0f4f8;
+    border: 1px solid #d1d9e6;
+    color: #2a9d8f;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.toggleButton:hover {
+    background-color: #e2e8f0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
 
 .dashboard h2 {
   text-align: center;
   color: #264653;
   margin-top: 0;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.5rem; /* Increased margin to avoid overlap with button */
 }
 
 .chartContainer {
   position: relative;
-  height: 300px;
+  /* Adjust height for line chart if needed, doughnut usually fits well */
+  height: 300px; /* Doughnut height */
   margin-bottom: 1.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+/* Ensure line chart container takes appropriate height */
+.dashboard > div > .chartContainer { /* More specific selector if needed */
+    height: 350px; /* Slightly taller for line chart with axes */
+}
+
+
 .noDataText {
   color: #888;
   font-style: italic;
+  text-align: center; /* Center the no data text */
+  width: 100%; /* Ensure it spans the container */
 }
 
 .total {
@@ -42,19 +78,23 @@
   border-bottom: 2px solid #f4a261;
   padding-bottom: 0.5rem;
   color: #2a9d8f;
+  margin-bottom: 1rem; /* Add margin below heading */
 }
 
 .emissionList ul {
   list-style-type: none;
   padding: 0;
+  max-height: 200px; /* Optional: limit height and add scroll */
+  overflow-y: auto; /* Optional: scroll if list is long */
 }
 
 .emissionList li {
   display: flex;
   justify-content: space-between;
+  align-items: center; /* Align items vertically */
   padding: 0.75rem 0.5rem;
   border-bottom: 1px solid #eee;
-  text-transform: capitalize;
+  font-size: 0.95rem; /* Slightly adjust font size */
 }
 
 .emissionList li:last-child {
@@ -63,4 +103,19 @@
 
 .emissionList span {
     color: #555;
+    flex-grow: 1; /* Allow text to take available space */
+    margin-right: 1rem; /* Add space between text and amount */
+    text-transform: capitalize;
+}
+
+.emissionList strong {
+    color: #333;
+    white-space: nowrap; /* Prevent CO2 value from wrapping */
+}
+
+/* Ensure paragraph below h3 also has some margin */
+.emissionList p {
+    margin-top: 1rem;
+    color: #777;
+    font-style: italic;
 }
